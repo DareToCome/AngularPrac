@@ -1,0 +1,13 @@
+<!-- <p>reactive works!</p> -->
+<form [formGroup]="signupForm" (submit)="formsubmit()">
+  <div class="form_container">
+    <label>bvdfjkd</label>
+    <input type="text" placeholder="fname" formControlName="fname" /><br />
+    <input type="text" placeholder="lname" formControlName="lname" /><br />
+    <input type="text" placeholder="email" formControlName="email" /><br />
+    <p *ngIf="emailError">This Fiels Is empty</p>
+    <input type="number" placeholder="phone" formControlName="phone" /><br />
+    <input type="password" placeholder="pass" formControlName="pass" /><br />
+    <button type="submit">Submit</button>
+  </div>
+</form>
