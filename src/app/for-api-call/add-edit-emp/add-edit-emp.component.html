@@ -1,0 +1,44 @@
+<div mat-dialog-title>
+  <h1>Edit The People</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onSave()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex. Maddy" formControlName="name" />
+      </mat-form-field>
+      <img
+        mat-card-image
+        class="people_img"
+        src="{{ data.avatar_url }}"
+        alt="Photo of a Shiba Inu"
+      />
+    </div>
+    <div class="row radio">
+      <mat-radio-group aria-label="Select an option" formControlName="status">
+        <mat-label><b>Admin Status</b></mat-label>
+        <mat-radio-button value="1" [checked]="data.site_admin"
+          >True</mat-radio-button
+        >
+        <mat-radio-button value="2" [checked]="!data.site_admin"
+          >False</mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>User Type</mat-label>
+        <mat-select formControlName="type">
+          <mat-option *ngFor="let type of userType" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button>Close</button>
+    <button mat-raised-button color="primary">Save</button>
+  </div>
+</form>

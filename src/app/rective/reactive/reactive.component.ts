@@ -7,6 +7,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactive.component.css'],
 })
 export class ReactiveComponent {
+  inpDdata: any = {
+    fname: 'cacac',
+    lname: 'saca',
+    email: 'cascs',
+    phone: 'ac',
+    pass: 'csa',
+  };
   constructor() {}
   signupForm = new FormGroup({
     fname: new FormControl('', [Validators.required]),
@@ -17,7 +24,7 @@ export class ReactiveComponent {
   });
   ngOnInit(): void {
     this.signupForm.patchValue({
-      fname: 'name',
+      fname: this.inpDdata.name,
       lname: 'last n',
     });
     this.signupForm.setValue({

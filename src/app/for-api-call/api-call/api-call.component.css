@@ -22,3 +22,6 @@ table {
   background-color: #9797f8;
   border-radius: 8px;
 }
+.example-spacer {
+  flex: 1 1 auto;
+}

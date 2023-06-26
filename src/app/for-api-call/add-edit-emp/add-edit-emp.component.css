@@ -1,0 +1,20 @@
+.content {
+  padding-top: 10px;
+}
+.row {
+  display: flex;
+  gap: 10px;
+}
+.radio {
+  margin-bottom: 10px;
+}
+.people_img {
+  width: 100px;
+  padding-inline: 1rem;
+}
+.action {
+  padding: 0 20px 25px;
+}
+.action button {
+  flex: 1;
+}

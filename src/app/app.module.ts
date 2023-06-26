@@ -8,6 +8,8 @@ import { ForApiCallModule } from './for-api-call/for-api-call.module';
 import { RectiveModule } from './rective/rective.module';
 import { TdfModule } from './tdf/tdf.module';
 import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +21,8 @@ import { MatTableModule } from '@angular/material/table';
     RectiveModule,
     TdfModule,
     MatTableModule,
+    BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
