@@ -20,7 +20,7 @@ export class AddEditEmpComponent implements OnInit {
       status: '',
     });
   }
-
+  // onsave
   onSave() {
     if (this.empForm.valid) {
       console.log(this.empForm.value);
